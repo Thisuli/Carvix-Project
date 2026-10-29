@@ -1,0 +1,226 @@
+.admin-sidebar {
+  width: 265px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 20px 20px;
+  background: linear-gradient(180deg, #503326 0%, #2b1a14 100%);
+  color: #ffffff;
+  z-index: 100;
+}
+
+.admin-sidebar-top {
+  width: 100%;
+}
+
+.admin-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* UPDATED LOGO STYLE */
+.admin-sidebar-logo {
+  width: 58px;
+  height: 52px;
+  object-fit: contain;
+  filter:
+    brightness(1.25)
+    drop-shadow(0 0 1px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.admin-sidebar-brand > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-sidebar-brand span {
+  color: #d89a70;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.admin-sidebar-brand strong {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.admin-sidebar-divider {
+  height: 1px;
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.admin-sidebar-label {
+  display: block;
+  margin: 0 8px 10px;
+  color: #d7aa8c;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.admin-system-label {
+  margin-top: 28px;
+}
+
+.admin-sidebar-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-nav-item {
+  min-height: 48px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 11px;
+  color: #ede4df;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.055);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-nav-item:hover {
+  background: rgba(255, 255, 255, 0.09);
+  transform: translateX(2px);
+}
+
+.admin-nav-item.active {
+  background: #c78962;
+  color: #ffffff;
+}
+
+.admin-nav-icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.09);
+  font-size: 14px;
+}
+
+.admin-nav-item small {
+  margin-left: auto;
+  min-width: 27px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 7px;
+}
+
+.admin-sidebar-bottom {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-profile-card {
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.admin-avatar {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(203, 137, 96, 0.22);
+  color: #f0c3a6;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.admin-profile-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-profile-card strong {
+  font-size: 9px;
+}
+
+.admin-profile-card span {
+  color: #b9aaa3;
+  font-size: 7px;
+}
+
+.admin-logout-button {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.admin-logout-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 78px;
+    padding: 20px 10px;
+  }
+
+  .admin-sidebar-brand > div,
+  .admin-sidebar-label,
+  .admin-nav-item > span:nth-child(2),
+  .admin-nav-item small,
+  .admin-profile-card > div:last-child {
+    display: none;
+  }
+
+  .admin-sidebar-brand {
+    justify-content: center;
+  }
+
+  .admin-sidebar-logo {
+    width: 48px;
+    height: 44px;
+  }
+
+  .admin-nav-item {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .admin-profile-card {
+    justify-content: center;
+  }
+
+  .admin-logout-button {
+    justify-content: center;
+  }
+}
